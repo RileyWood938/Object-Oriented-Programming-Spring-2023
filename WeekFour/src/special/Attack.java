@@ -1,5 +1,10 @@
 package special;
 
+/**
+ * <p>class to store an individual attack</p>
+ * <p>stores attack damage, result (hit or miss) and any magical effect</p>
+ * <p>used as a return type by the various weapons' attack methods</p>
+ */
 public class Attack {
     int damage;
     String hitResult;
