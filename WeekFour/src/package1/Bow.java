@@ -48,7 +48,20 @@ public class Bow {
         return tempAttack;
     }
 
-    public void printBow(){
+    /**
+     * method to print information on the bow.
+     * <p>throws an arrayout of bounds exception about 1/4 times it is run. This was implemented to practice
+     * try/catch/throw. Obviouslyt this is not the intended use, as array index out of bounds is a logical error and
+     * thus not one which should be handled by try/catch. This was purely added as proof of concept for throwing errors
+     * up to the cal;lign function and catching them there.</p>
+     * @throws ArrayIndexOutOfBoundsException
+     */
+    public void printBow() throws ArrayIndexOutOfBoundsException
+    {
+        int[] integerarray = {0};
+        if(Math.ceil(Math.random() * 20)<5){
+            integerarray[5] = 1;
+        }
         System.out.println("Your Bow has damage: "+ damage + " and range: " + range);
     }
 }

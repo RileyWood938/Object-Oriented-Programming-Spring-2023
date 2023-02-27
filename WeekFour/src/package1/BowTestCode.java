@@ -16,10 +16,18 @@ public class BowTestCode {
     public void testBow(){
         for (int i = 0; i <= 3; i++) {
             Bow newBow = new Bow(i, 5*i);
-            newBow.printBow();
-            System.out.println("you attacked an enemy " + "10" + " meters away.");
-            Attack tempAttack = newBow.rollAttack(10, 7*i, 2*i);
-            System.out.println(tempAttack.printAttack());
+            try{
+                newBow.printBow();
+                System.out.println("you attacked an enemy " + "10" + " meters away.");
+                Attack tempAttack = newBow.rollAttack(10, 7*i, 2*i);
+                System.out.println(tempAttack.printAttack());
+            }catch (ArrayIndexOutOfBoundsException arrayError){
+                System.out.println("array index out of bounds in magicBowPrint");
+                System.out.println(arrayError);
+            }
+            catch (Exception e){
+                System.out.println(e);
+            }
             System.out.println("");
         }
     }
