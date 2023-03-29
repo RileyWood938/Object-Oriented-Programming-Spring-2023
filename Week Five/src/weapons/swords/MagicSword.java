@@ -2,23 +2,20 @@ package weapons.swords;
 
 import weapons.Ability;
 import weapons.Attack;
+import weapons.exceptions.negativeInputException;
 
 public class MagicSword extends Sword {
     private Ability swordEffect = new Ability();
-    public MagicSword() {
-        super();
-        swordEffect.pickRandomPower();
-    }
-    public MagicSword(String SwordAbility) {
-        super();
+    public MagicSword(String name, String SwordAbility) throws negativeInputException {
+        super(name);
         swordEffect.setPowertype(SwordAbility);
     }
-    public MagicSword(int damage) {
-        super(damage);
+    public MagicSword(String name, int damage) throws negativeInputException {
+        super(name, damage);
         swordEffect.pickRandomPower();
     }
-    public MagicSword(int damage, String SwordAbility) {
-        super(damage);
+    public MagicSword(String name, int damage, String SwordAbility) throws negativeInputException {
+        super(name, damage);
         swordEffect.setPowertype(SwordAbility);
     }
 
@@ -29,14 +26,12 @@ public class MagicSword extends Sword {
      * @return returns an attack
      */
     @Override
-    public Attack rollAttack(int armorClass, int attackModifier) {
-        Attack MagicAttack = super.rollAttack(armorClass, attackModifier);
-        MagicAttack.setEffect(swordEffect.getAttackEffect());
-        return MagicAttack;
+    public Attack rollAttack(int armorClass, int attackModifier, int distance) {
+        return super.rollAttack(armorClass, attackModifier, distance, swordEffect.getAttackEffect());
     }
     @Override
     public String printSword(){
-        return("Your Magic sword has damage: "+ this.getDamage()  + " and the effect: " + swordEffect.getAttackEffect());
+        return(super.printSword() + " and the effect: " + swordEffect.getAttackEffect());
     }
 
     public String getSwordEffect(){

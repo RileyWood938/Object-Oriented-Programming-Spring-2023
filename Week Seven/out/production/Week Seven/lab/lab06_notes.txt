@@ -1,0 +1,23 @@
+
+
+
+TextBlock is an interface implemented by textline and boxedblock
+BoxedBlock is also composed of a textblock
+
+
+
+Printing new TextBlock With area: 3.0
+asf
+
+Printing new TextBlock With area: 4.0
+ifgj
+
+Printing new TextBlock With area: 18.0
+******
+*sffg*
+******
+
+Printing new TextBlock With area: 24.0
+********
+*ojojoj*
+********

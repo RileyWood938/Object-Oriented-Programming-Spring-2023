@@ -16,15 +16,10 @@ public class Ability {
         powerType = powers[randomNumber];
 
     }
-
     public void setPowertype(String inputAbility) {
         powerType = inputAbility;
     }
 
-    /**
-     * <p>method to turn the powertype integer into a string and return that</p>
-     * @return returns the effect of the weapon as a string
-     */
     public String getAttackEffect(){
         return powerType;
     }

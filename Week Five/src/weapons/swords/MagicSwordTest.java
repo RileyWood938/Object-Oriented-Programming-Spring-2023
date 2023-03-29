@@ -2,39 +2,35 @@ package weapons.swords;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import weapons.exceptions.negativeInputException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MagicSwordTest extends Sword {
-    Sword testingSword;
-
+class MagicSwordTest {
+    MagicSword testingSword;
     @BeforeEach
     void init(){
-        testingSword = new MagicSword("fire");
+        try {
+            testingSword = new MagicSword("testingSword","fire");
+        } catch (negativeInputException e) {
+            throw new RuntimeException(e);
+        }
     }
-    @Test
-    void testMagicSword(){
-        Sword testSword2 = new MagicSword("fire");
-        assertEquals(testSword2.printSword(), testingSword.printSword());
-        assertEquals(testSword2.getDamage(), testingSword.getDamage());
-        assertEquals(testSword2.getSwordEffect(), testingSword.getSwordEffect());
 
-        testSword2 = new MagicSword(5,"fire");
-        assertEquals(testSword2.printSword(), testingSword.printSword());
-        assertEquals(testSword2.getDamage(), testingSword.getDamage());
-        assertEquals(testSword2.getSwordEffect(), testingSword.getSwordEffect());
-    }
+
+
     @Test
     void testRollAttack() {
     }
 
     @Test
     void testPrintSword() {
+        assertEquals("Your sword has damage: 5 and the effect: fire", testingSword.printSword());
+
     }
 
-
     @Test
-    void testGetSwordEffect() {
-        assertEquals(testingSword.getSwordEffect(), "fire");
+    void getSwordEffect() {
+        assertEquals("fire", testingSword.getSwordEffect());
     }
 }
