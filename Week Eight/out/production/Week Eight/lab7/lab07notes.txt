@@ -1,0 +1,25 @@
+1) Observe the output and briefly explain how the SavingsAccounts are printed after being sorted
+
+The savings accounts switch orders after being sorted (they are sorted by account number). after the first sort they
+are in order from greatest to least,and after the second  from least to greatest.
+
+2) Observe the output and briefly explain how the SavingsAccounts are printed after being sorted
+
+After this sort, their order is based on the interest rate of the account rather than the account number
+
+3)Now, create a new class that implements the Comparator interface for the SavingsAccounts (it overrides
+  the compare(…) method to use the account balance for comparison. Add necessary lines to the code (in
+  the main method) to display the impact of this new class.
+
+4)Justify the following scene with appropriate examples: [5 points]
+
+  (1) you would use Comparable instead of Comparator
+When you have multiple ways you want to sort something, use the Comparator interface in a new object. This allows
+more choice of sorting method, although it requires more classes and more inputs to the sorting method.
+
+  (2) you would use Comparator instead of Comparable
+Using comparable is the correct choice when you want to have a default sorting method for an object. When there is only
+one sorting method you want to use most of the time, implement it in the class as the comparable interface.
+
+5) Now, in the main(…) method, create an Iterator type object to iterate over the collection,
+  allBankAccounts. Use that iterator to iterate over the items and print each item. [5 points]
