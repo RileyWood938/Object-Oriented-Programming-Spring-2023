@@ -1,0 +1,19 @@
+a) false
+b) true (but also it inherits private methods and parameters)
+c) false. it should have six
+d) true
+e) false. it calls the lowest override in the tree
+f) true sort of. its a bit more complex. method overlading exists to create
+flexibility regarding function input, where as overriding creates flexibility regarding
+how the method operates in the context of a new class
+g)true
+h)true
+i) true
+j) it should be valid. you might need to cast "o" to the type cat first, but
+since there is a potential for it to work, java will let you compile it and throw an
+error if "o" is not of the type "cat"
+k) true
+l) true
+m) false
+n) false
+0) false
