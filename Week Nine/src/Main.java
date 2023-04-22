@@ -6,6 +6,9 @@ public class Main {
         sumInput[2] = 7;
 
 
-        System.out.println(BestSum.BestSum(5652,sumInput));
+        System.out.println(BestSum.BestSum(52,sumInput));
+
+//        System.out.println(Fibbonacci.fibTab(15));
+//        System.out.println(Fibbonacci.fib(15));
     }
 }

@@ -66,7 +66,7 @@ public class SeiveOfEratosthenes implements PrimeNumberGenerator {
                 else
                     numbersToWrite.append(", "+i);
            BufferedWriter writer = new BufferedWriter(new FileWriter(maxLimit+".csv"));
-            writer.write(numbersToWrite.toString());
+           writer.write(numbersToWrite.toString());
 
             writer.close();
         }catch (IOException e){
